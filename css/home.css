@@ -83,3 +83,16 @@ body{
     from {margin-left: -100vw;}
     to {margin-left: -10vw;}
 }
+
+table {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Responsivo | GN</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body id="body">
     <div class="header" id="header">
@@ -21,7 +21,7 @@
             <button onclick="toggleSidebar()" class="btn_icon_header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
+            </svg>
             </button>
             <a href="#" class="active">Home</a>
             <a href="#">Cursos</a>
@@ -32,6 +32,20 @@
     <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
         <h1>Menu Responsivo - Gustavo Neitzke</h1>
     </div>
+
+    <h1>Cartela de Bingo</h1>
+    <table>
+        <% for(let i = 0; i < cartela.length; i++) { %>
+            <% if (i % 5 === 0) { %>
+                <tr>
+            <% } %>
+            <td><%= cartela[i] %></td>
+            <% if (i % 5 === 4) { %>
+                </tr>
+            <% } %>
+        <% } %>
+    </table>
+
+    <script src="../javascript/home.js"></script>
 </body>
-<script src="javascript/home.js"></script>
 </html>
